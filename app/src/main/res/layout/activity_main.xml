@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/start_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시작 값"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/edit_start"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/start_value"
+        app:layout_constraintTop_toBottomOf="@+id/start_value"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/end_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="종료 값"
+        app:layout_constraintStart_toStartOf="@+id/edit_start"
+        app:layout_constraintTop_toBottomOf="@+id/edit_start"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:id="@+id/edit_end"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/end_value"
+        app:layout_constraintTop_toBottomOf="@+id/end_value"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/sum_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edit_end"
+        tools:text="n부터 m까지의 합은?"
+        app:layout_constraintStart_toStartOf="@+id/edit_end"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="result_test"
+        app:layout_constraintStart_toStartOf="@+id/sum_message"
+        app:layout_constraintTop_toBottomOf="@+id/sum_message"
+        android:textSize="40dp"
+        android:layout_margin="4dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/button_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="계산"
+        app:layout_constraintStart_toStartOf="@+id/result"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        android:layout_marginTop="30dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
