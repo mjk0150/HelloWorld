@@ -22,7 +22,15 @@ public class MainActivity extends AppCompatActivity {
         binding.button400.setOnClickListener(this::buttonEvent);
     }
 
+    private void enableAll() {
+        binding.button200.setEnabled(true);
+        binding.button100.setEnabled(true);
+        binding.button400.setEnabled(true);
+    }
+
     private void buttonEvent(View v) {
+        enableAll();
+        v.setEnabled(false); //button not enabled to press
         int newHeight = 0;
 
         switch (v.getId()) {
